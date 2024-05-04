@@ -61,7 +61,7 @@ pub fn render(req: Request) -> Result<Response> {
         eprintln!("Updated request path: {:?}", path_info);
     }
 
-    // If a theme is specifed, create theme path
+    // If a theme is specified, create theme path
     let theme_dir = if config.theme.is_some() {
         let mut path: PathBuf = PathBuf::from(THEME_PATH);
         path.push(config.theme.as_ref().unwrap());
